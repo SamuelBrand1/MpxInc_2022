@@ -20,7 +20,7 @@ library(tidyverse)#added
 rstan_options(auto_write=TRUE)
 options(mc.cores=parallel::detectCores())
 ###1. data -----
-raw_data <- read_csv("anonym_data.csv")
+raw_data <- read_csv("data/anonym_data.csv")
 
 input_data <- list(N=length(raw_data$`Start date of exposure`), 
               tStartExposure=raw_data$`Start date of exposure`,
